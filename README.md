@@ -304,8 +304,70 @@ L'API contient notamment la liste des machines que nous allons récupérer pour 
 
 Ne passez pas à côté de cette partie, les notions mises en jeu sont fondamentales.
 
+##### 8.1) Installation d'une librairie permettant de faire des appels HTTP.
+
+Pour pouvoir faire des appels à une API, VueJS préconise l'utilisation de la librairie [axios](https://github.com/axios/axios).
+
+Prenez toujours le temps d'analyser cette librairie sur github, qu'est ce qui vous inspire confiance ? Ayez le reflexe de chercher la librairie sur [npm](https://www.npmjs.com/package/axios) pour notamment voir le nombre de téléchargements.
+
+Installer le librairie avec npm.
+
+##### 8.2) Notion de promesses.
+
+La notion de promesses est fondamentale en javascript, prenez le temps de lire en détail la [documentation](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Utiliser_les_promesses).
+
+Réaliser ensuite le cours 12 du cours de CodeAcademy sur les [requêtes](https://www.codecademy.com/fr/learn/introduction-to-javascript).
+
+Prenez le temps de solliciter les formateurs pour faire le point sur ce que vous avez compris.
 
 
+##### 8.3) Utilisation dans le projet
+
+Nous allons afficher la liste des machines provenant de cette [route](https://machine-api-campus.herokuapp.com/api/machines).
+
+Comme vous le savez une promesse a plusieurs état :
+
+* En cours.
+* Terminée et succès.
+* Terminée et erreur.
+
+Nous devons suivre ces états dans notre composant, ajouter donc au data deux clefs `loading` et `error` permettant de savoir si la requête est en cours et si il y a eu une erreur.
+
+Aussi, enlever les machines que nous avions mises tout à l'heure.
+
+Votre data devrait ressembler à ça :
+
+```js
+data: function() {
+	return {
+	  machines: [],
+	  loading: false,
+	  error: null,
+	}
+}
+```
+
+Avant d'aller plus loin, il faut choisir quand lancer la requête, la solution communèment admise est de dire : "Quand le composé est crée, lance la requête".
+
+Vuejs, nous donne permet de déclencher des actions ( hooks ) à certains moments précis de la vie d'un composant. La liste est disponible [ici](https://fr.vuejs.org/v2/api/index.html#Options-Cycle-de-vie-des-hooks). Celui qui nous intéresse est le `created`.
+
+Ajouter donc l'appel http avec axios permettant d'afficher la liste des machines.
+
+Faites en sorte d'afficher un texte `requête en cours` si jamais la requête est en cours et une erreur en rouge si jamais la requête produit une erreur.
+
+**Faites un commit avec un message explicite**
+
+##### 8.4) Mise à jour du composant MachinesMap.
+
+Faites la même chose pour le composant `MachinesMap` afin qu'il affiche tous les marqueurs des machines de l'API.
+
+##### 8.5) Eviter le doublons
+
+Si vous faites attention nous faisons le même appel http dans nos deux composants, ça fonctionne mais ce n'est pas optimal, l'utilisateur va attendre deux fois pour consulter les mêmes données.
+
+Quelles idées avez vous pour répondre à ce problème ?
+
+Discutons-en et essayez de mettre en oeuvre.
 
 
 ### 9) Aller plus loin
@@ -313,12 +375,16 @@ Ne passez pas à côté de cette partie, les notions mises en jeu sont fondament
 
 ##### 9.1) Centrer la carte par rapport à sa localisation.
 
-Pour rendre plus pratique son utilisation, faites en sorte que la carte soit centrée par rapport à la position de l'utilisateur utilisant la carte.
+Pour rendre plus pratique son utilisation, faites en sorte que la carte soit centrée par rapport à la position de l'utilisateur [utilisant la carte].
+
+Documentation de l'API du navigateur pour la [géolocalisation](https://developer.mozilla.org/fr/docs/Web/API/Navigator)
 
 
 ##### 9.2) Filtrer la liste des machines
 
-Nous voulons permettre à l'utilisateur de visualiser uniquement les machines
+Nous voulons permettre à l'utilisateur de visualiser uniquement les machines.
+
+Ajouter un select avec trois entrées ( "ok", "ko", "*" ) permettant de filtrer uniquement les machines en fonction du status.
 
 
 ##### 9.3) Ajouter une nouvelle machine
@@ -336,7 +402,7 @@ Faites la même chose pour une modification ou suppression de machine. ( Attenti
 En utilisant le template fourni en début se module, packager votre application avec cordova et faites la tourner sur une émulateur android.
 
 
-### 11) Aller plus loin.
+### 11) Aller ( encore ) plus loin.
 
 Laravel et Vue ayant une très bonne intégration, refaites l'API avec VueJS.
 
