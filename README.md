@@ -1,5 +1,7 @@
 # Application de gestion du parc des machines à cafés.
 
+![](http://g.recordit.co/12eM3wueWB.gif)
+
 ### 1) Initialiser une application Vue.
 
 * Commençons par créer une application VueJS, pour cela utilisons l'interface en ligne de commande officielle `vue-cli`.
