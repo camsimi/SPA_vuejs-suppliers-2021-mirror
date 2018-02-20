@@ -1,4 +1,4 @@
-# Application de gestion du parc des machines à cafés.
+# Application de gestion du parc des machines à café.
 
 ![](http://g.recordit.co/12eM3wueWB.gif)
 
@@ -12,9 +12,9 @@ Si ce n'est pas fait, il faut d'abord l'installer avec npm :
 npm install --global vue-cli
 ```
 
-**Question :** Rappeler ce qu'est npm et pourquoi nous utilisons l'option --global ?
+Question : Rappeler ce qu'est npm et pourquoi nous utilisons l'option --global ?
 
-  *Votre réponse : *
+  Votre réponse :
 
 * Créer maintenant l'application :
 
@@ -24,9 +24,11 @@ vue create browserify-simple [NOM_PROJET]
 
 Si des questions vous sont posées, choisissez les options par défaut.
 
-* Quels sont des bons réflexes à avoir quand vous télécharger un nouveau projet ? Quels fichiers regarder ? Avant même de commencer à lancer l'application et sans regarder le code vous pouvez apprendre plein de choses.
+* Quels sont les bons réflexes à avoir quand vous télécharger un nouveau projet ? Quels fichiers regarder en priorité ? 
 
   *Votre réponse : *
+  
+Avant même de commencer à lancer l'application et sans regarder le code vous pouvez apprendre plein de choses. Prenrez cette habitude
 
 * Si vous regarder le fichier `README.md` du projet vous voyez que trois commandes sont indiquées, quel est le but de chacune ?
 
@@ -47,14 +49,14 @@ Faites les modifications nécessaires, voici à titre d'exemple un rendu possibl
 
 ![](images/step1.png)
 
-Ajouter dans votre composant app deux méthodes : `onMachinesListClick` et `onMapClick` qui devront faire des alertes pour marquer le fait qu'un utilisateur a cliqué dessus.
+Ajouter dans votre composant App deux méthodes : `onMachinesListClick` et `onMapClick` qui devront faire des [alertes](https://www.w3schools.com/jsref/met_win_alert.asp) pour marquer le fait qu'un utilisateur a cliqué dessus.
 
 
 ### 3) Préparation des écrans.
 
 Nous voulons préparer les écrans de la liste des machines ainsi que celui des cartes. En VueJs tout est composant, si nous voulons un nouvel écran, il nous fait un nouveau composant.
 
-* Créer donc deux fichiers `MachinesList.vue` et `MachinesMap.vue`, les templates de ces composants doivent être très simple, un simple titre h1 avec 'Liste des machines' ou 'Carte des machines' est suffisant.
+* Créer donc deux fichiers `MachinesList.vue` et `MachinesMap.vue`, les templates de ces composants seront être très simples dans un premier temps, par exemple un simple titre h1 avec 'Liste des machines' ou 'Carte des machines' est suffisant.
 
 * Faites en sorte d'ajouter ces deux composants Vue au template de votre app.
 
@@ -62,7 +64,7 @@ Votre page doit ressembler à ceci :
 
 ![](images/step2.png)
 
-* Commiter dans git avec un message explicite, par exemple 'fin étape 3' ou même "Ajout composants MachinesList' et 'MachinesMap'"
+* Commiter dans git avec un message explicite, par exemple 'fin étape 3' ou même "Ajout composants MachinesList et MachinesMap"
 
 
 ### 4) Mise en place d'un router.
@@ -77,7 +79,7 @@ Cela tombe bien, Vue a un router tout prêt que nous allons utiliser, [vue-route
 
 ##### 4.1) Installation.
 
-Faites l'installation avec npm comme décrite dans le documentation. N'oublier pas d'ajouter après l'installation les deux lignes.
+Faites l'installation avec npm comme décrite dans la documentation. N'oublier pas d'ajouter après l'installation les deux lignes.
 
 ```
 import VueRouter from 'vue-router'
@@ -117,7 +119,7 @@ Pour l'utiliser nous devons utiliser les deux composants fournis par VueRouter :
 * `<router-view></router-view>` : qui spécifie à quel endroit de votre page le contenu de la route correspondant au composant spécifié dans la déclaration va être inséré.
 * `<router-link to="" ></router-link>` qui permet de passer d'une page à l'autre.
 
-Ajouter donc `<router-view></router-view>` à la fin du template de notre composant `App.vue` et utiliser `<router-link to="" ></router-link>` pour passer d'une page à l'autre dans le même composant.
+Ajouter donc `<router-view></router-view>` à la fin du template de notre composant `App.vue` et utiliser `<router-link to="NOM_ROUTE" ></router-link>` pour passer d'une page à l'autre dans le même composant.
 
 Voici le résultat que vous devriez obtenir : [GIF](http://recordit.co/6kVde9Yu7S)
 
@@ -148,68 +150,54 @@ Si vous changer le statut en true alors :
 
 Notes : 
 * Pour afficher la date, la méthode [toLocaleString()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Date/toLocaleString) de Date devrait vous aider.
-* Ici un simple titre h1 est utilisé pour le nom, un h3 pour le status et un h5 pour la date, vous pouvez bien évidemment l'adapter.
+* Ici un simple titre h1 est utilisé pour le nom, un h3 pour le status et un h5 pour la date, vous pouvez bien évidemment l'adapter en fonction de vos envies.
 * On a déclaré une route mais pas donner de lien explicite dans l'application pour y accéder, mais vous pouvez directement [changer l'url du navigateur](http://localhost:8080/#/machine).
 
 **Faites un commit avec un message explicite**
 
 ##### 5.2) Passage de props au composant Machine.
 
-Nous avançons bien, notre dernier composant va nous aider à construire l'écran comprenant la liste de nos machines. Mais aujourd'hui il a une limite : on ne peut pas modifier le nom, le status de la machine sans toucher au code, il faut trouver un moyen de paramétrer notre composant. Pour cela nous allons utiliser la notion de props dans VueJS.
+Nous avançons bien ! Notre dernier composant va nous aider à construire l'écran comprenant la liste de nos machines. Mais aujourd'hui il a une limite : on ne peut pas modifier le nom, le status de la machine sans toucher au code, il faut trouver un moyen de paramétrer notre composant. Pour cela nous allons utiliser la notion de props dans VueJS.
 
-Penser aux props comme aux paramètres d'une fonction. Notre composant au dessus 'ressemble' à la fonction javascript :
+Penser aux props comme aux paramètres d'une fonction. 
 
-```
-function Machine() {
-	const machine = {
-		name: 'What else ?',
-		status: false,
-		checkedAt: new Date(),
-	}
-	...
-}
-
-``` 
-
-Pour rendre parametrable une fonction il faut ajouter des paramètres. Pour rendre parentérale un composant il faut ajouter des props.
+Pour rendre parametrable une fonction il faut ajouter des paramètres. Pour rendre parametrable un composant il faut ajouter des props.
 
 * Dans un premier temps, appeler le composant `Machine` dans le composant `MachinesList`. Vous devez donc avoir la même page aux urls `/machines` et `/machine`.
 
-* Ajouter le fait que le composant `Machine` a trois props qui s'appelle `name`, `status` et `checkedAt`, supprimer les datas du composant `Machine`, Mais ajoutez les dans le composant `Machine`.
+* Ajouter le fait que le composant `Machine` a trois props qui s'appelle `name`, `status` et `checkedAt`, supprimer les datas du composant `Machine`, Mais ajoutez les dans le composant `MachinesList`.
 
 * Modifier le composant `MachinesList` pour passer les props `name`, `status` et `checkedAt`.
 
-A ce stade, vous devriez avoir la même chose qu'avant en terme de rendu, néanmoins nous sommes prêts à faire notre liste de machines car nous avons un composant `Machine` qui est parametrable grâce aux props
+A ce stade, vous devriez avoir la même chose qu'avant en terme de rendu, néanmoins nous sommes prêts à faire notre liste de machines car nous avons un composant `Machine` qui est parametrable grâce aux props !
 
 **Faites un commit avec un message explicite**
-
 
 ### 6) Création d'une liste.
 
 Modifier le composant `MachinesList` pour que ces datas retournent l'objet suivant :
 
-```
+```js
 {
 	machines: [{
 		id: 1,
 		name: 'What else ?',
-      status: true,
-      checkedAt: new Date(),
-	},
-	{
+		status: true,
+		checkedAt: new Date(),
+	}, {
 		id: 2,
-	   name: 'Broken',
-      status: false,
-      checkedAt: new Date(),
+		name: 'Broken',
+		status: false,
+		checkedAt: new Date(),
 	}]
 }
 ```
 
-Remarquer que nous avons ajoute une clef `id` à nos objets, pourquoi ?
+Remarquer que nous avons ajouté une clef `id` à nos objets, pourquoi ?
 
 *Votre réponse*
 
-Modifier un peu le style pour que la liste soit apparente, voici un exemple de ce que vous pourriez obtenir :
+Modifier un peu le style pour que les éléments de la liste soit mieux visable, voici un exemple de ce que vous pourriez obtenir :
 
 ![](images/step4.png)
 
@@ -236,7 +224,7 @@ Prenez le temps de regarder la page, qu'est ce qui vous inspire confiance ? Ou a
 
 Pour pouvoir utiliser ce plugin, nous avons besoin de créer une clef API, pour faire cela suivre [les instructions](https://developers.google.com/maps/documentation/javascript/get-api-key).
 
-Le concept de clef d'API est très très commun, aussi nous vous invitons à prendre quelques minutes pour le comprendre ?
+Le concept de clef d'API est très très commun, aussi nous vous invitons à prendre quelques minutes pour le comprendre.
 
 A quoi sert une clef API ? Puis je partager cette clef ? Dois je la commiter ?
 
@@ -264,10 +252,9 @@ Puis dans votre composant `MachineMap` ajoutez ce code :
 </gmap-map>
 ``` 
 
-Prenez le temps de jouer sur les paramètres pour comprendre chacun.
+Prenez le temps de jouer sur les paramètres pour les comprendre.
 
 **Faites un commit avec un message explicite**
-
 
 ##### 7.3) Ajouter les marqueurs.
 
@@ -304,7 +291,7 @@ Il est important de comprendre les principaux verbes d'une API HTTP et de savoir
 
 L'API contient notamment la liste des machines que nous allons récupérer pour adapter nos vues de liste et carte.
 
-Ne passez pas à côté de cette partie, les notions mises en jeu sont fondamentales.
+**Ne passez pas à côté de cette partie, les notions mises en jeu sont fondamentales.**
 
 ##### 8.1) Installation d'une librairie permettant de faire des appels HTTP.
 
@@ -312,7 +299,9 @@ Pour pouvoir faire des appels à une API, VueJS préconise l'utilisation de la l
 
 Prenez toujours le temps d'analyser cette librairie sur github, qu'est ce qui vous inspire confiance ? Ayez le réflexe de chercher la librairie sur [npm](https://www.npmjs.com/package/axios) pour notamment voir le nombre de téléchargements.
 
-Installer le librairie avec npm.
+Installer la librairie avec npm.
+
+**Faites un commit avec un message explicite**
 
 ##### 8.2) Notion de promesses.
 
@@ -320,8 +309,11 @@ La notion de promesses est fondamentale en javascript, prenez le temps de lire e
 
 Réaliser ensuite le cours 12 du cours de CodeAcademy sur les [requêtes](https://www.codecademy.com/fr/learn/introduction-to-javascript).
 
-Prenez le temps de solliciter les formateurs pour faire le point sur ce que vous avez compris.
+Prenez le temps de solliciter les formateurs pour faire le point sur ce que vous avez compris :
 
+* Quel problème cherchons nous à résoudre ?
+* Quelle est la solution proposée ?
+* Comment la mettre en oeuvre ?
 
 ##### 8.3) Utilisation dans le projet.
 
@@ -333,7 +325,7 @@ Comme vous le savez une promesse a plusieurs état :
 * Terminée et succès.
 * Terminée et erreur.
 
-Nous devons suivre ces états dans notre composant, ajouter donc au data deux clefs `loading` et `error` permettant de savoir si la requête est en cours et si il y a eu une erreur.
+Nous devons suivre ces états dans notre composant, ajouter donc auz datas deux clefs `loading` et `error` permettant de savoir si la requête est en cours et si il y a eu une erreur.
 
 Aussi, enlever les machines que nous avions mises tout à l'heure.
 
@@ -342,8 +334,8 @@ Votre data devrait ressembler à ça :
 ```js
 data: function() {
 	return {
-	  machines: [],
-	  loading: false,
+	  machines: [], // au début la liste des machines est vide
+	  loading: false,
 	  error: null,
 	}
 }
@@ -371,9 +363,7 @@ Quelles idées avez vous pour répondre à ce problème ?
 
 Discutons-en et essayez de mettre en oeuvre.
 
-
 ### 9) Aller plus loin.
-
 
 ##### 9.1) Centrer la carte par rapport à sa localisation.
 
