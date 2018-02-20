@@ -16,7 +16,7 @@ npm install --global vue-cli
 
 **Votre réponse :**
 
-* Créer maintenant l'application :
+* Créez maintenant l'application :
 
 ```
 vue create browserify-simple [NOM_PROJET]
@@ -30,11 +30,11 @@ Si des questions vous sont posées, choisissez les options par défaut.
   
 Avant même de commencer à lancer l'application et sans regarder le code vous pouvez apprendre plein de choses. Prenez cette habitude.
 
-**Question :** Si vous regarder le fichier `README.md` du projet vous voyez que trois commandes sont indiquées, quel est le but de chacune ?
+**Question :** Si vous regardez le fichier `README.md` du projet vous voyez que trois commandes sont indiquées, quel est le but de chacune ?
 
 **Votre réponse :**
  
-* Lancer le projet.
+* Lancez le projet.
 
 **Question :** Une fois que tout fonctionne faites un premier commit ( vous aurez surement besoin d'initialiser le repository git ). Quelle est la commande à utiliser ? 🤔
 
@@ -49,7 +49,7 @@ Faites les modifications nécessaires, voici à titre d'exemple un rendu possibl
 
 ![](images/step1.png)
 
-Ajoutez dans votre composant App deux méthodes : `onMachinesListClick` et `onMapClick` qui devront faire des [alertes](https://www.w3schools.com/jsref/met_win_alert.asp) pour marquer le fait qu'un utilisateur a cliqué dessus.
+* Ajoutez dans votre composant App deux méthodes : `onMachinesListClick` et `onMapClick` qui devront faire des [alertes](https://www.w3schools.com/jsref/met_win_alert.asp) pour marquer le fait qu'un utilisateur a cliqué dessus.
 
 
 ### 3) Préparation des écrans.
