@@ -398,6 +398,6 @@ En utilisant le template fourni en début de module, packagez votre application 
 
 ### 11) Aller ( encore ) plus loin.
 
-Laravel et Vue ayant une très bonne intégration, refaites l'API avec VueJS.
+Laravel et Vue ayant une très bonne intégration, refaites l'API avec LARAVEL.
 
-Vous pouvez y ajouter un système d'authentification qui ne permettrait de voir les machines que si vous êtes connecté, et qui n'autoriserait la création/modification/suppression que si l'utilisateur a un rôle d'admin.
+Vous pouvez y ajouter un système d'authentification qui ne permettrait de voir les machines que si vous êtes connecté, et qui n'autoriserait la création/modification/suppression que si l'utilisateur a un rôle d'admin [DOC](https://laravel.com/docs/5.6/passport)
