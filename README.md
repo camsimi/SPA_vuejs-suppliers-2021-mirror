@@ -49,7 +49,7 @@ Faites les modifications nécessaires, voici à titre d'exemple un rendu possibl
 
 ![](images/step1.png)
 
-* Ajoutez dans votre composant App deux méthodes : `onMachinesListClick` et `onMapClick` qui devront faire des [alertes](https://www.w3schools.com/jsref/met_win_alert.asp) pour marquer le fait qu'un utilisateur a cliqué dessus.
+* Ajoutez dans votre composant App deux méthodes : `onMachinesListClick` et `onMapClick` qui devront faire des [alertes](https://developer.mozilla.org/fr/docs/Web/API/Window/alert) pour marquer le fait qu'un utilisateur a cliqué dessus.
 
 
 ### 3) Préparation des écrans.
