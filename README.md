@@ -64,7 +64,7 @@ Votre page doit ressembler à ceci :
 
 ![](images/step2.png)
 
-* Commiter dans git avec un message explicite, par exemple 'fin étape 3' ou même "Ajout composants MachinesList et MachinesMap"
+➡️**Commiter dans git avec un message explicite, par exemple 'fin étape 3' ou même "Ajout composants MachinesList et MachinesMap"**
 
 
 ### 4) Mise en place d'un routeur.
@@ -155,7 +155,7 @@ Notes :
 * Ici un simple titre h1 est utilisé pour le nom, un h3 pour le status et un h5 pour la date, vous pouvez bien évidemment l'adapter en fonction de vos envies.
 * On a déclaré une route mais pas donné de lien explicite dans l'application pour y accéder, mais vous pouvez directement [changer l'url du navigateur](http://localhost:8080/#/machine).
 
-**Faites un commit avec un message explicite**
+➡️**Faites un commit avec un message explicite**
 
 ##### 5.2) Passage de props au composant Machine.
 
@@ -173,7 +173,7 @@ Pour rendre paramétrable une fonction il faut ajouter des paramètres. Pour ren
 
 À ce stade, vous devriez avoir la même chose qu'avant en terme de rendu, néanmoins nous sommes prêts à faire notre liste de machines car nous avons un composant `Machine` qui est paramétrable grâce aux props !
 
-**Faites un commit avec un message explicite**
+➡️**Faites un commit avec un message explicite**
 
 ### 6) Création d'une liste.
 
@@ -203,7 +203,7 @@ Modifiez le composant `MachinesList` pour que ces datas retournent l'objet suiva
 
 ![](images/step4.png)
 
-**Faites un commit avec un message explicite**
+➡️**Faites un commit avec un message explicite**
 
 
 ### 7) Création d'une map.
@@ -256,7 +256,7 @@ Puis dans votre composant `MachineMap` ajoutez ce code :
 
 Prenez le temps de jouer sur les paramètres pour les comprendre.
 
-**Faites un commit avec un message explicite**
+➡️**Faites un commit avec un message explicite**
 
 ##### 7.3) Ajouter les marqueurs.
 
@@ -282,7 +282,7 @@ En utilisant un `v-for`, affichez des marqueurs aux deux positions des machines 
 Voici un exemple de rendu : ![](images/step5.png)
 
 
-**Faites un commit avec un message explicite**
+➡️**Faites un commit avec un message explicite**
 
 
 ### 8) Récupérer les données via une API externe.
@@ -293,7 +293,7 @@ Il est important de comprendre les principaux verbes d'une API HTTP et de savoir
 
 L'API contient notamment la liste des machines que nous allons récupérer pour adapter nos vues de liste et de carte.
 
-**Ne passez pas à côté de cette partie, les notions mises en jeu sont fondamentales.**
+⚠️**Ne passez pas à côté de cette partie, les notions mises en jeu sont fondamentales.**
 
 ##### 8.1) Installation d'une librairie permettant de faire des appels HTTP.
 
@@ -303,7 +303,7 @@ Prenez toujours le temps d'analyser cette librairie sur github, qu'est ce qui vo
 
 * Installez la librairie avec npm.
 
-**Faites un commit avec un message explicite**
+➡️**Faites un commit avec un message explicite**
 
 ##### 8.2) Notion de promesses.
 
@@ -311,7 +311,7 @@ Prenez toujours le temps d'analyser cette librairie sur github, qu'est ce qui vo
 
 * Réalisez ensuite le cours 12 du cours de CodeAcademy sur les [requêtes](https://www.codecademy.com/fr/learn/introduction-to-javascript).
 
-Prenez le temps de solliciter les formateurs pour faire le point sur ce que vous avez compris :
+☝️**Prenez le temps de solliciter les formateurs pour faire le point sur ce que vous avez compris :**
 
 * Quel problème cherchons nous à résoudre ?
 * Quelle est la solution proposée ?
@@ -351,7 +351,7 @@ Vuejs nous permet de déclencher des actions ( ou *hooks* ) à certains moments 
 
 * Faites en sorte d'afficher un texte `requête en cours` si jamais la requête est en cours et une erreur en rouge si jamais la requête produit une erreur.
 
-**Faites un commit avec un message explicite**
+➡️**Faites un commit avec un message explicite**
 
 ##### 8.4) Mise à jour du composant MachinesMap.
 
