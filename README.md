@@ -19,7 +19,7 @@ npm install --global vue-cli
 * Créez maintenant l'application :
 
 ```
-vue create browserify-simple [NOM_PROJET]
+vue init browserify-simple [NOM_PROJET]
 ```
 
 Si des questions vous sont posées, choisissez les options par défaut.
