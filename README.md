@@ -23,6 +23,14 @@ npm install --global vue-cli
 
 **Votre réponse :**
 
+Vérfier que la version installée est au moins la version 3 :
+
+```
+vue --version
+```
+
+Si jamais vous avez un message de type : "Command not found", vous pouvez suivre [ce tuto](https://www.technig.com/solve-vue-command-not-found-windows/)
+
 - Créez maintenant l'application :
 
 ```
