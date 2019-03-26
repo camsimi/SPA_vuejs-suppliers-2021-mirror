@@ -91,9 +91,10 @@ Nous voulons déclarer deux routes, une `/suppliers` avec la liste des fournisse
 - Initialisez l'objet router de Vue contenant ces routes et injectez-le dans la création de l'app Vue, votre code doit ressembler à :
 
 ```
-const app = new Vue({
-  router
-}).$mount('#app')
+new Vue({
+  router,
+  render: h => h(App)
+}).$mount("#app");
 ```
 
 - Supprimez maintenant les composants `SuppliersList` et `SuppliersMap` du template de notre composant `App.vue`.
