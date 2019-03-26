@@ -283,6 +283,12 @@ Voici un exemple de rendu : ![](images/step5.png)
 
 Nous avons créé pour vous une API REST permettant de gérer vos fournisseurs. Cette api est disponible à cette url : [https://api-suppliers.herokuapp.com/api](https://api-suppliers.herokuapp.com/api). Et la documentation [ici](https://api-suppliers.herokuapp.com/).
 
+Par exemple pour lister l'ensemble des fournisseurs il faudra appeler [cette URL](https://api-suppliers.herokuapp.com/api/suppliers)
+
+Si vous faites le test, vous verrez que le résultat n'est pas très lisible. La réponse de l'API est au format [JSON](https://developer.mozilla.org/fr/docs/Learn/JavaScript/Objects/JSON), un standard dans le monde du web.
+
+Il existe des plugins sous chrome permettant de visualiser un résultat JSON de facon plus propre : par exemple sous chrome vous pouvez installer ce [plugin](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc).
+
 Il est important de comprendre les principaux verbes d'une API HTTP et de savoir lire une documentation pour connaitre ses possibilités et ses limitations, prenez quelques minutes pour bien comprendre la documentation de cette API.
 
 L'API contient notamment la liste des fournisseurs que nous allons récupérer pour adapter nos vues de liste et de carte.
