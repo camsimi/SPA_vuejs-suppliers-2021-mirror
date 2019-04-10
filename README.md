@@ -16,7 +16,7 @@ Vous êtes le gérant d'un site ecommerce, ce site vend un produit unique : de l
 Si ce n'est pas fait, il faut d'abord l'installer avec npm :
 
 ```
-npm install --global vue-cli
+npm install --global @vue/cli
 ```
 
 **Question :** Rappelez ce qu'est npm et pourquoi nous utilisons l'option `--global` ?
