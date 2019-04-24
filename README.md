@@ -5,7 +5,7 @@ Vous êtes le gérant d'un site ecommerce, ce site vend un produit unique : de l
 - lister vos fournisseurs de spiruline
 - savoir si un fournisseur en a en stock
 - afficher les fournisseurs sur une carte
-- savoir quel est le fourniisseur ayant du stock le plus proche pour faire une livraison rapide
+- savoir quel est le fournisseur ayant du stock le plus proche pour faire une livraison rapide
 
 ![](images/preview.gif)
 
@@ -66,8 +66,6 @@ Nous voulons préparer les écrans de la liste des fournisseurs ainsi que celui 
 - Créez donc deux fichiers `SuppliersList.vue` et `SuppliersMap.vue`. Les templates de ces composants seront très simples dans un premier temps, par exemple un simple titre h1 contenant 'Liste des fournisseurs' ou 'Carte des fournisseurs' est suffisant.
 
 - Faites en sorte d'ajouter ces deux composants Vue au template de votre app.
-
-* Faites en sorte d'ajouter ces deux composants Vue au template de votre app.
 
 ➡️**Commiter dans git avec un message explicite, par exemple "fin étape 3" ou même "Ajout composants SuppliersList et SuppliersMap"**
 
@@ -194,6 +192,8 @@ Pour rendre paramétrable une fonction il faut ajouter des paramètres. Pour ren
 }
 ```
 
+➡️ Bouclez maintenant sur cette donnée pour appeler autant de fois le composant `Supplier` qu'il y a d'objets dans cette nouvelle data de `SuppliersList`.
+
 **Question :** Remarquez que nous avons ajouté une clef `id` à nos objets, pourquoi ?
 
 **Votre réponse :**
@@ -201,6 +201,17 @@ Pour rendre paramétrable une fonction il faut ajouter des paramètres. Pour ren
 ➡️ Modifiez un peu le style pour que les éléments de la liste soient mieux visibles, voici un exemple de ce que vous pourriez obtenir :
 
 ![](images/step4.png)
+
+➡️**Faites un commit avec un message explicite**
+
+##### 6.1) Formattage des dates
+Un timestamp complet n'est pas agréable à lire, encore moins répété dans une liste.
+La librairie `timeago.js` permet de formatter les dates pour afficher un temps relatif, plus parlant.
+
+➡️ Ajoutez la libraire à votre projet avec npm pour afficher la valeur de `checkedAt` avec un temps relatif.
+
+https://github.com/hustcc/timeago.js
+
 
 ➡️**Faites un commit avec un message explicite**
 
