@@ -23,7 +23,7 @@ npm install --global @vue/cli
 
 **Votre réponse :**
 
-Vérfier que la version installée est au moins la version 3 :
+Vérfier que la version de Vue CLI installée est au moins la version 3 :
 
 ```
 vue --version
@@ -288,6 +288,31 @@ Voici un exemple de rendu : ![](images/step5.png)
 ➡️**Faites un commit avec un message explicite**
 
 ### 8) Récupérer les données via une API externe.
+
+☝️**Préambule - Point d'étape sur l'architecture de l'application**
+
+Avant de passer à l'étape suivante, nous allons passer en revue l'architecture de notre application Vue.js. 
+Pour cela, constituez un tableau à 2 colonnes, la première colonne représentant le serveur web et la 2ème le navigateur web. Par exemple :
+
+Serveur web | Navigateur web
+--- | ---
+abc | def
+ghi | ...
+
+
+Répartissez ensuite les étapes ci-dessous dans les 2 colonnes, selon qu’elles sont traitées selon vous par le serveur ou le navigateur :
+- Stocker les données de l’application
+- Router les requêtes HTTP
+- Effectuer le rendu des pages web
+- Afficher les pages web
+- Exécuter le code métier de l’application
+
+Effectuez l’exercice pour une application Laravel, puis pour une application Vue.js.
+Constatez les différences : comment sécuriser l’accès aux données de l’application dans ce 2ème cas ?
+
+**Fin du préambule**
+
+
 
 Nous avons créé pour vous une API REST permettant de gérer vos fournisseurs. Cette api est disponible à cette url : [https://api-suppliers.herokuapp.com/api](https://api-suppliers.herokuapp.com/api). Et la documentation [ici](https://api-suppliers.herokuapp.com/).
 
