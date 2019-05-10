@@ -206,66 +206,37 @@ Pour rendre paramétrable une fonction il faut ajouter des paramètres. Pour ren
 
 ##### 6.1) Formattage des dates
 Un timestamp complet n'est pas agréable à lire, encore moins répété dans une liste.
-La librairie `timeago.js` permet de formatter les dates pour afficher un temps relatif, plus parlant.
+La librairie `timeago.js` nous permet de formatter les dates pour afficher un temps relatif, plus parlant.
 
 ➡️ Ajoutez la libraire à votre projet avec npm pour afficher la valeur de `checkedAt` avec un temps relatif.
 
 https://github.com/hustcc/timeago.js
 
-
-➡️**Faites un commit avec un message explicite**
-
-### 7) Création d'une map.
-
-Nous voulons maintenant arriver à visualiser les différentes fournisseurs sur une carte.
-
-##### 7.1) Choisir le bon package.
-
-Pour afficher une carte nous allons utiliser la librairie de google-maps grâce à un package spécialement créé pour Vue.
-
-Ce package est disponible à [cette adresse](https://github.com/xkjyeah/vue-google-maps).
-
-Il est toujours fondamental de savoir évaluer avant de se lancer un package ou un projet sur github ou même npm.
+> Il est toujours fondamental de savoir évaluer avant de se lancer un package ou un projet sur github ou même npm.
 
 **Question :** Prenez le temps de regarder la page, qu'est ce qui vous inspire confiance, ou au contraire, méfiance ?
 
 **Votre réponse :**
 
-**Question :** Cherchez puis listez d'autres packages qui permettraient d'afficher une carte google maps.
+➡️**Faites un commit avec un message explicite**
+
+### 7) Création d'une map.
+
+Maintenant, essayons de visualiser les différents fournisseurs sur une carte, chacun avec un marqueur.
+
+##### 7.1) Map vide
+
+Pour afficher une carte nous allons utiliser le fond de carte OpenStreetMap avec la librairie Leaflet, grâce à un package spécialement créé pour Vue.
+
+Ce package, **Vue2Leaflet**,  est disponible à [cette adresse](https://korigan.github.io/Vue2Leaflet/#/quickstart.md).
+
+➡️ Ajoutez cette libraire à votre projet en reprenant cet exemple : https://github.com/Romainpetit/leaflet-vue
+
+**Question :** Cherchez puis listez au minimum 3 autres packages qui permettraient d'afficher une carte en javascript. Quels sont leur différences avec Leaflet pour OpenStreetMap ?
 
 **Votre réponse :**
 
-##### 7.2) Map vide.
-
-Pour pouvoir utiliser ce plugin, nous avons besoin de créer une clef API, pour faire cela suivre [les instructions](https://developers.google.com/maps/documentation/javascript/get-api-key).
-
-Le concept de clef API est très, très commun, aussi nous vous invitons à prendre quelques minutes pour le comprendre.
-
-**Question :** A quoi sert une clef API ? Puis je partager cette clef ? Dois je la commiter ?
-
-**Votre réponse :**
-
-Une fois que vous avez votre clef, insérez ce bout de code dans votre fichier `main.js` :
-
-```
-import * as VueGoogleMaps from 'vue2-google-maps'
-Vue.use(VueGoogleMaps, {
-  load: {
-    key: 'YOUR_API_TOKEN',
-  }
-})
-```
-
-Puis dans votre composant `SuppliersMap` ajoutez ce code :
-
-```
-<gmap-map
-  :center="{lat:10, lng:10}"
-  :zoom="7"
-  style="width: 100%; height: 800px"
->
-</gmap-map>
-```
+➡️ Affichez une carte dans votre composant `SuppliersMap`
 
 Prenez le temps de jouer sur les paramètres pour les comprendre.
 
@@ -302,7 +273,7 @@ Voici un exemple de rendu : ![](images/step5.png)
 
 ☝️**Préambule - Point d'étape sur l'architecture de l'application**
 
-Avant de passer à l'étape suivante, nous allons passer en revue l'architecture de notre application Vue.js. 
+Avant de passer à l'étape suivante, nous allons passer en revue l'architecture de notre application Vue.js.
 Pour cela, constituez un tableau à 2 colonnes, la première colonne représentant le serveur web et la 2ème le navigateur web. Par exemple :
 
 Serveur web | Navigateur web
@@ -319,9 +290,14 @@ Répartissez ensuite les étapes ci-dessous dans les 2 colonnes, selon qu’elle
 - Exécuter le code métier de l’application
 
 Effectuez l’exercice pour une application Laravel, puis pour une application Vue.js.
-Constatez les différences : comment sécuriser l’accès aux données de l’application dans ce 2ème cas ?
 
-**Fin du préambule**
+➡️ Constatez les différences : comment sécuriser l’accès aux données de l’application dans ce 2ème cas ?
+
+**Votre réponse :**
+
+
+Fin du préambule
+* * *
 
 
 
