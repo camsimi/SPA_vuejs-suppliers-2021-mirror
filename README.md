@@ -122,6 +122,8 @@ Voici le résultat que vous devriez obtenir : [GIF](http://recordit.co/26PagUagE
 
 ### 5) Création d'un composant pour représenter un fournisseur.
 
+A ce stade, la liste de fournisseurs est vide, il n'y a donc pas de navigation possible à partir de la liste. Nous allons cependant créer la vue détaillée d'un fournisseur, qui pourra être rendue accessible soit via un bouton `<router-link to="..." ></router-link>` (temporaire) ou en saisissant l'URL directement comme indiqué en fin de section.
+
 ##### 5.1) Composant statique dans une nouvelle route.
 
 Créez dans un premier temps une nouvelle route `'/supplier'` qui va représenter un nouveau composant à créer, `Supplier.vue`.
