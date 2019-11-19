@@ -331,7 +331,7 @@ Prenez toujours le temps d'analyser cette librairie sur github, qu'est ce qui vo
 
 - La notion de promesses est fondamentale en javascript, prenez le temps de lire en détail [la documentation](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Utiliser_les_promesses).
 
-- Réalisez ensuite le [cours 12 du cours de CodeAcademy sur les requêtes](https://www.codecademy.com/fr/learn/introduction-to-javascript).
+- Réalisez ensuite le [cours 12 du cours de CodeAcademy sur les promesses](https://www.codecademy.com/learn/introduction-to-javascript/modules/javascript-promises).
 
 ☝️**Prenez le temps de solliciter les formateurs pour faire le point sur ce que vous avez compris :**
 
