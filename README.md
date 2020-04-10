@@ -230,8 +230,7 @@ Maintenant, essayons de visualiser les différents fournisseurs sur une carte, c
 
 Pour afficher une carte nous allons utiliser le fond de carte OpenStreetMap avec la librairie Leaflet, grâce à un package spécialement créé pour Vue.
 
-Ce package, **Vue2Leaflet**,  est disponible à [cette adresse](https://korigan.github.io/Vue2Leaflet/#/quickstart.md).
-
+Ce package, **Vue2Leaflet**,  est disponible à [cette adresse](https://github.com/vue-leaflet/Vue2Leaflet).
 ➡️ Ajoutez cette libraire à votre projet en reprenant cet exemple : https://github.com/Romainpetit/leaflet-vue
 
 **Question :** Cherchez puis listez au minimum 3 autres packages qui permettraient d'afficher une carte en javascript. Quels sont leur différences avec Leaflet pour OpenStreetMap ?
