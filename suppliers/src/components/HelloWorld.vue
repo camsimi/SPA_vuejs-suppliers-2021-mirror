@@ -61,9 +61,11 @@ li {
   display: inline-block;
   margin: 0 10px;
 }
+
 button {
   background-color: #42b983;
   border-style: none;
   margin: 10px;
+  padding: 13px 15px;
 }
 </style>
