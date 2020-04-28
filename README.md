@@ -1,4 +1,4 @@
-# Application de gestion des fournisseurs d'un site ecommerce.
+﻿# Application de gestion des fournisseurs d'un site ecommerce.
 
 Vous êtes le gérant d'un site ecommerce, ce site vend un produit unique : de la [spiruline](https://fr.wikipedia.org/wiki/Spiruline_%28compl%C3%A9ment_alimentaire%29). Afin de gérer vos stocks, vous souhaitez créer une application permettant de :
 
@@ -21,7 +21,7 @@ npm install --global @vue/cli
 
 **Question :** Rappelez ce qu'est npm et pourquoi nous utilisons l'option `--global` ?
 
-**Votre réponse :**
+**Votre réponse :  node package manager, installateur/gestionnaire de paquet de Node.js. Si on ne spécifie pas -g, les paquets sont installés dans le dossier actuel. On souhaite installer certains paquets en global pour qu’il soient accessibles partout en local. **
 
 Vérfier que la version de Vue CLI installée est au moins la version 3 :
 
