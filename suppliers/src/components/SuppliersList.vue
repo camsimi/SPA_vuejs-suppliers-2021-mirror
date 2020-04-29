@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>Liste des fournisseurs</h1>
-        <Supplier></Supplier>
+        <Supplier :name="name" :status="status" :checked-at="checkedAt"></Supplier>
     </div>
 </template>
 
@@ -12,6 +12,13 @@
         name: "SuppliersList.vue",
         components: {
             Supplier,
+        },
+        data () {
+            return {
+                name: 'Raheem50',
+                status: false, // est ce qu'il y a du stock
+                checkedAt: new Date().toLocaleString("en-US",  {weekday: "short", month: "short", day: "numeric", year:"numeric", hour: "numeric", minute: "numeric", second: "numeric", timeZone: "UTC"}) // date de la dernière mise à jour du stock
+            }
         }
     }
 </script>

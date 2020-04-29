@@ -13,14 +13,16 @@
 
     export default {
         name: "Supplier",
-        data () {
-            return {
-                name: 'Raheem50',
-                status: false, // est ce qu'il y a du stock
-                checkedAt: new Date().toLocaleString("en-US",  {weekday: "short", month: "short", day: "numeric", year:"numeric", hour: "numeric", minute: "numeric", second: "numeric", timeZone: "UTC"}) // date de la dernière mise à jour du stock
-            }
+        props: ['name', 'status', 'checkedAt']
         }
-    }
+        // data () {
+        //     return {
+        //         name: 'Raheem50',
+        //         status: false, // est ce qu'il y a du stock
+        //         checkedAt: new Date().toLocaleString("en-US",  {weekday: "short", month: "short", day: "numeric", year:"numeric", hour: "numeric", minute: "numeric", second: "numeric", timeZone: "UTC"}) // date de la dernière mise à jour du stock
+        //     }
+        // }
+
    // export const supplier = new Vue ({
    //     el: "app",
    //      data: {
