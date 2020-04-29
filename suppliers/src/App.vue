@@ -1,25 +1,22 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Que voulez-vous faire?"/>
+    <br>
+    <br>
+    <Suppliers msg="Que voulez vous faire?"/>
+    <router-link class="link" to="suppliers">Voir la liste des fournisseurs</router-link>
+    <router-link class="link" to="map">Voir la carte</router-link>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Suppliers from "./components/Suppliers";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  },
-  methods: {
-    onSuppliersListClick: function() {
-      alert("Tu as cliqué sur la liste des fournisseurs")
-    },
-    onMapClick: function() {
-      alert("Tu as cliqué sur la carte")
-    }
+    Suppliers,
   }
 }
 </script>
@@ -33,4 +30,12 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+.link {
+  background-color: #42b983;
+  border-style: none;
+  margin: 10px;
+  padding: 13px 15px;
+}
 </style>
+
