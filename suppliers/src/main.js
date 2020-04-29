@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-// import Suppliers from "./components/Suppliers";
+import Supplier from "./components/Supplier";
 import SuppliersList from "./components/SuppliersList";
 import SuppliersMap from "./components/SuppliersMap";
 import VueRouter from 'vue-router'
@@ -13,8 +13,9 @@ const router = new VueRouter({
   mode: 'history',
   routes : [
     {path: '/map', component: SuppliersMap},
-    {path: '/suppliers', component: SuppliersList}
-  ],
+    {path: '/suppliers', component: SuppliersList},
+    {path: '/supplier', component: Supplier}
+  ]
 })
 
 new Vue({

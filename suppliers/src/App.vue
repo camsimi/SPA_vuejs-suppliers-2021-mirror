@@ -3,7 +3,7 @@
     <img alt="Vue logo" src="./assets/logo.png">
     <br>
     <br>
-    <Suppliers msg="Que voulez vous faire?"/>
+    <Helloworld msg="Que voulez vous faire?"/>
     <router-link class="link" to="suppliers">Voir la liste des fournisseurs</router-link>
     <router-link class="link" to="map">Voir la carte</router-link>
     <router-view></router-view>
@@ -11,12 +11,12 @@
 </template>
 
 <script>
-import Suppliers from "./components/Suppliers";
+import Helloworld from "./components/Helloworld";
 
 export default {
   name: 'App',
   components: {
-    Suppliers,
+    Helloworld,
   }
 }
 </script>
