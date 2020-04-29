@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="supplier">
         <h2>Fournisseur {{ name }}</h2>
         <h3 v-bind:class="{ok : status, ko: !status}">
             <span v-if="status">A du stock ? OK</span>
@@ -42,5 +42,10 @@
 
 .ko {
     color: red;
+}
+
+.supplier {
+    border-style: solid;
+    border-color: grey;
 }
 </style>
