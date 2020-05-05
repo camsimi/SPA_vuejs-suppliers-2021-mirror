@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>Liste des fournisseurs</h1>
-        <p v-if="error">Il y a une erreur</p>
+        <p v-if="error" class="red">Il y a une erreur</p>
         <p v-if="loading">Chargement en cours</p>
         <ul>
             <li class="supplier-list">
@@ -69,5 +69,9 @@ li {
 }
 .supplier {
     margin-bottom: 10px;
+}
+
+.red{
+    color: red;
 }
 </style>
