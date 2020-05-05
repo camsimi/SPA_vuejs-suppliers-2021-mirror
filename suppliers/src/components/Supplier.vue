@@ -22,7 +22,7 @@
                 type: Boolean
             },
             checkedAt: {
-                type: Date,
+                type: String,
             }
         }
     }

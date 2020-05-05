@@ -6,6 +6,8 @@
     <Helloworld msg="Que voulez vous faire?"/>
     <router-link class="link" to="suppliers">Voir la liste des fournisseurs</router-link>
     <router-link class="link" to="map">Voir la carte</router-link>
+    <p v-if="$store.state.error" class="red">Il y a une erreur</p>
+    <p v-if="$store.state.loading">Chargement en cours</p>
     <router-view></router-view>
   </div>
 </template>
@@ -17,6 +19,9 @@ export default {
   name: 'App',
   components: {
     Helloworld,
+  },
+  mounted() {
+    this.$store.dispatch("getSuppliers");
   }
 }
 </script>

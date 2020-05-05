@@ -6,12 +6,12 @@ import SuppliersMap from "./components/SuppliersMap";
 import VueRouter from 'vue-router'
 import { Icon } from "leaflet";
 import "leaflet/dist/leaflet.css";
+import Vuex from "vuex";
 
 Vue.use(VueRouter)
+Vue.use(Vuex)
 
 Vue.config.productionTip = false
-
-// Resolve an issue where the markers would not appear
 delete Icon.Default.prototype._getIconUrl;
 
 Icon.Default.mergeOptions({
@@ -29,7 +29,43 @@ const router = new VueRouter({
   ]
 })
 
+const axios = require('axios');
+
+const store = new Vuex.Store({
+  state: {
+    suppliers: [],
+    loading: false,
+    error: null
+  },
+  mutations: {
+    loadSuppliers: function(state, suppliers) {
+      state.suppliers = suppliers;
+    },
+    setLoading: function(state, loading){
+      state.loading = loading;
+    },
+    setError: function(state, error){
+      state.error = error;
+    }
+  },
+  actions: {
+    getSuppliers: function(context){
+      context.commit('setLoading', true);
+      axios.get("https://api-suppliers.herokuapp.com/api/suppliers")
+          .then(resolve => {
+            context.commit('setLoading', false);
+            context.commit('loadSuppliers', resolve.data);
+          })
+          .catch((error) => {
+            context.commit('setLoading', false);
+            context.commit('setError', error);
+          })
+    }
+  }
+})
+
 new Vue({
   router,
+  store,
   render: h => h(App),
 }).$mount('#app');
