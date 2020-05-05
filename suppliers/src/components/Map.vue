@@ -15,6 +15,8 @@
 
 <script>
     import { LMap, LTileLayer, LMarker } from 'vue2-leaflet';
+    const axios = require("axios");
+
     export default {
         name: "Map",
         components: {
@@ -29,16 +31,16 @@
                 center: [47.413220, -1.219482],
                 markerLatLng: [47.313220, -1.319482],
                 suppliers: [
-                    {
-                        id: 1,
-                        latitude: 10,
-                        longitude: 10
-                    },
-                    {
-                        id: 2,
-                        latitude: 11,
-                        longitude: 9.6
-                    }
+                    // {
+                    //     id: 1,
+                    //     latitude: 10,
+                    //     longitude: 10
+                    // },
+                    // {
+                    //     id: 2,
+                    //     latitude: 11,
+                    //     longitude: 9.6
+                    // }
                 ]
             };
         },
@@ -52,6 +54,22 @@
             // latLngUpdated (markerLatLng) {
             //     this.markerLatLng = markerLatLng;
             // }
+        },
+        mounted: function () {
+            this.loading = true;
+            axios.get("https://api-suppliers.herokuapp.com/api/suppliers")
+                .then(resolve => {
+                    this.loading = false;
+                    this.suppliers = resolve.data;
+                    // this.suppliers.id = resolve.data.id;
+                    // this.suppliers.latitude = resolve.data.latitude;
+                    // this.suppliers.longitude = resolve.data.longitude;
+                })
+                .catch((error) => {
+                    this.loading = false;
+                    this.error = error;
+                    return this.error;
+                })
         }
     }
 </script>

@@ -7,11 +7,12 @@
 
 <script>
     import Map from "./Map";
+
     export default {
         name: "SuppliersMap",
         components: {
             Map,
-        }
+        },
     }
 </script>
 
