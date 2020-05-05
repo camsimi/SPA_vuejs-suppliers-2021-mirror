@@ -13,26 +13,19 @@
 
     export default {
         name: "Supplier",
-        props: ['name', 'status', 'checkedAt']
+        props: {
+            name: {
+                type: String,
+                default: "fournisseur"
+            },
+            status: {
+                type: Boolean
+            },
+            checkedAt: {
+                type: Date,
+            }
         }
-        // data () {
-        //     return {
-        //         name: 'Raheem50',
-        //         status: false, // est ce qu'il y a du stock
-        //         checkedAt: new Date().toLocaleString("en-US",  {weekday: "short", month: "short", day: "numeric", year:"numeric", hour: "numeric", minute: "numeric", second: "numeric", timeZone: "UTC"}) // date de la dernière mise à jour du stock
-        //     }
-        // }
-
-   // export const supplier = new Vue ({
-   //     el: "app",
-   //      data: {
-   //          name: 'Mon fournisseur',
-   //          status: false, // est ce qu'il y a du stock
-   //          checkedAt: new Date() // date de la dernière mise à jour du stock
-   //      }
-   //  })
-
-
+    }
 </script>
 
 <style scoped>
