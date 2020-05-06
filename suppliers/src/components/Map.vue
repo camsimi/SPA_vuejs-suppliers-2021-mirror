@@ -15,7 +15,6 @@
 <script>
     import { LMap, LTileLayer, LMarker } from 'vue2-leaflet';
 
-
     export default {
         name: "Map",
         components: {
@@ -30,8 +29,8 @@
             return {
                 url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
                 zoom: 4.5,
-                center: [47.413220, -1.219482],
-                markerLatLng: [47.313220, -1.319482],
+                center: [31.224361, 121.469170],
+                markerLatLng: [47.313220, 50.319482],
                 // suppliers: [
                     // {
                     //     id: 1,
@@ -57,22 +56,11 @@
             //     this.markerLatLng = markerLatLng;
             // }
         },
-        // mounted: function () {
-        //     this.loading = true;
-        //     axios.get("https://api-suppliers.herokuapp.com/api/suppliers")
-        //         .then(resolve => {
-        //             this.loading = false;
-        //             this.suppliers = resolve.data;
-        //             // this.suppliers.id = resolve.data.id;
-        //             // this.suppliers.latitude = resolve.data.latitude;
-        //             // this.suppliers.longitude = resolve.data.longitude;
-        //         })
-        //         .catch((error) => {
-        //             this.loading = false;
-        //             this.error = error;
-        //             return this.error;
-        //         })
-        // }
+        created() {
+            navigator.geolocation.getCurrentPosition((position) => {
+               return this.center = [position.coords.latitude, position.coords.longitude];
+            });
+        }
     }
 </script>
 

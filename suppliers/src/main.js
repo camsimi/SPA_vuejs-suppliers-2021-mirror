@@ -7,6 +7,7 @@ import VueRouter from 'vue-router'
 import { Icon } from "leaflet";
 import "leaflet/dist/leaflet.css";
 import Vuex from "vuex";
+import axios from "axios";
 
 Vue.use(VueRouter)
 Vue.use(Vuex)
@@ -28,8 +29,6 @@ const router = new VueRouter({
     {path: '/supplier', component: Supplier}
   ]
 })
-
-const axios = require('axios');
 
 const store = new Vuex.Store({
   state: {
