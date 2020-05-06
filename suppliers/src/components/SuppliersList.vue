@@ -1,27 +1,31 @@
 <template>
     <div>
+        <addSupplier></addSupplier>
         <h1>Liste des fournisseurs</h1>
+
         <select name="suppliers-select" v-model="selected">
             <option value="ok">ok</option>
             <option value="ko">ko</option>
             <option value="*">*</option>
         </select>
-
         <ul>
             <li class="supplier-list">
                 <Supplier v-for="supplier in chooseSuppliers()" :key="supplier.id" :name="supplier.name" :status="supplier.status" :checked-at="formatDate()"></Supplier>
             </li>
         </ul>
+
     </div>
 </template>
 
 <script>
     import Supplier from "./Supplier";
     import {format} from "timeago.js";
+    import addSupplier from "./addSupplier";
 
     export default {
         name: "SuppliersList.vue",
         components: {
+            addSupplier,
             Supplier,
         },
         data() {
@@ -44,15 +48,6 @@
                 }
             },
         }
-            // filterOk(){
-            //     return supplier.filter(supplier.status === "ok");
-            // },
-            // filterKo(){
-            //     return supplier.filter(supplier.status === "ko");
-            // },
-            // filterA(){
-            //     return supplier.filter(supplier.status === "*");
-            // },
     }
 
 </script>

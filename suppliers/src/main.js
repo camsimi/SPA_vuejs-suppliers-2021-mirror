@@ -50,7 +50,8 @@ const store = new Vuex.Store({
     },
     setError: function(state, error){
       state.error = error;
-    }
+    },
+
   },
   actions: {
     getSuppliers: function(context){
