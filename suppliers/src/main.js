@@ -36,6 +36,11 @@ const store = new Vuex.Store({
     loading: false,
     error: null
   },
+  getters: {
+    pickSuppliers(state) {
+      return state.suppliers;
+    }
+  },
   mutations: {
     loadSuppliers: function(state, suppliers) {
       state.suppliers = suppliers;
